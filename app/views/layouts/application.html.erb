@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsYelpMvp</title>
+    <title>Rails Yelp MVP</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar">
+      <%= link_to "Fake Yelp", restaurants_path, class: 'navbar-brand' %>
+      <%= link_to "Add New Restaurant", new_restaurant_path, class: 'btn btn-primary' %>
+    </div>
+    <div class="container mt-3">
+      <%= yield %>
+    </div>
   </body>
 </html>

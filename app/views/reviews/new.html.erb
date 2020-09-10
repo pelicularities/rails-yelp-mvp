@@ -1,0 +1,8 @@
+<h1>Leave a review for <%= @restaurant.name %></h1>
+<%= simple_form_for [ @restaurant, @review ] do |f| %>
+  <div><%= f.label :content %></div>
+  <div><%= f.input_field :content %></div>
+  <div><%= f.label :rating %></div>
+  <div><%= f.input_field :rating %></div>
+  <div><%= f.button :submit, class: 'btn btn-primary mt-3' %></div>
+<% end %>
